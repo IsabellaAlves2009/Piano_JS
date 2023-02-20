@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #ebebeb;
+    background-image: url('https://wallpaperset.com/w/full/8/8/0/462749.jpg');
+}
+
+.piano{
+    background-color: #121212;
+    width: 1000px;
+    height: 400px;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls{
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.controls h1{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.switcher{
+    width: 50px;
+    height: 25px;
+    background-color: #555;
+    display: flex;
+    border-radius: 50px;
+    padding: 4px;
+}
+
+.switcher_button{
+    height: 100%;
+    /* width: 20px; */
+    aspect-ratio: 1/1;
+    background-color: #ddd;
+    border-radius: 25px;
+}
+
+.switcher_active{
+    justify-content: flex-end;
+    background-color: #006eff;
+}
+
+.checkbox_label{
+    dispplay: flex;
+    gap: 15px;
+}
+
+.piano_keys{
+    width: 100%;
+    height: 300px;
+    background-color: #181818;
+    border-radius: 15px;
+    padding: 30px 40px;
+    display: flex;
+}
+
+.white{
+    background-color: #fff;
+    width: 60px;
+    flex-grow: 1;
+    border-radius: 5px;
+    border-bottom: 8px solid #ddd;
+    color: #000000;
+    margin-left: -17px;
+    z-index: 1;
+}
+.black{
+    width: 40px;
+    background: linear-gradient(#000, #333);
+    height: 150px;
+    border-radius: 0 0 5px 5px;
+    border-bottom: 8px solid #222;
+    margin-left: -20px;
+    z-index: 2;
+    color: #fff;
+}
+.key span{
+    font-weight: 600;
+    position: absolute;
+    transition-duration: 300ms; 
+}
+
+.key{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 8px;
+    user-select: none;
+}
+
+.piano_keys .white:nth-child(1){
+    margin-left: 0;
+}
+.piano_keys .white:nth-child(5){
+    margin-right: 20px;
+}
+
+.piano_keys .white:nth-child(12){
+    margin-right: 20px;
+}
+
+.piano_keys .white:nth-child(17){
+    margin-right: 20px;
+}
+
+.black_pressed{
+    background: linear-gradient("#000, #222");
+    display: none;
+    height: 148px;
+}
+
+.disabled_keys span{
+    opacity: 0;
+}
