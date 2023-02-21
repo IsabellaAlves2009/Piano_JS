@@ -12,7 +12,7 @@ const handleMouseDown = (key) => {
     playNote(key.getAttribute('data-note'));
 
     if (key.className.includes('black')) {
-        key.classList.add('black_pressed');
+        key.classList.add('.black_pressed');
         return;
     }
 
@@ -20,12 +20,13 @@ const handleMouseDown = (key) => {
 }
 
 const handleMouseUp = (key) => {
+
     if (key.className.includes('black')) {
-        key.classList.remove('black_pressed');
+        key.classList.remove('.black_pressed');
         return;
     }
 
-    key.style.background = 'white';
+    key.style.background = '#fff';
 }
 
 keys.forEach((key) => {
@@ -33,7 +34,7 @@ keys.forEach((key) => {
     key.addEventListener('mouseup', () => handleMouseUp(key))
 });
 
-checkbox.addEventListener('change', ({target}) => {
+checkbox.addEventListener('change', ({ target }) => {
     if (target.checked) {
         switcher.classList.add('switcher_active');
         keysSection.classList.remove('disabled_keys');
@@ -95,7 +96,7 @@ const keyUpMapper = {
     "=": () => handleMouseUp(keys[20]),
     "]": () => handleMouseUp(keys[21]),
     "Backspace": () => handleMouseUp(keys[22]),
-    "\\": () => handleMouseUp(keys[23])
+    "\\": () => handleMouseUp(keys[23]),
 }
 
 document.addEventListener('keydown', (event) => {
